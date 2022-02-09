@@ -69,6 +69,22 @@
     return string;
 }
 
+//重写isEqual 判断device 是否相等
+- (BOOL)isEqual:(CLUPnPDevice *)object {
+    if (self == object) {
+        return YES;
+    }
+    else if (self == nil || object == nil || ![object isKindOfClass:[self class]]) {
+        return NO;
+    }
+    
+    return [self.uuid isEqualToString:object.uuid] && [self.loaction.absoluteString isEqualToString:object.loaction.absoluteString];
+}
+
+- (NSUInteger)hash {
+    return [self.uuid hash] ^ [self.loaction hash];
+}
+
 @end
 
 @implementation CLServiceModel
