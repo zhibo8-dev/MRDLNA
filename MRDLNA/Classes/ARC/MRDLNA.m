@@ -99,6 +99,12 @@
     [self.upd start];
 }
 
+/**
+ 停止搜设备
+ */
+- (void)stopSearch {
+    [self.upd stop];
+}
 
 /**
  设置音量

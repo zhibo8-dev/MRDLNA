@@ -47,6 +47,11 @@
 - (void)startSearch;
 
 /**
+ 停止搜设备
+ */
+- (void)stopSearch;
+
+/**
  DLNA投屏
  */
 - (void)startDLNA;
