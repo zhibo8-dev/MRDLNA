@@ -105,8 +105,8 @@
     CLLog(@"发送信息成功");
      __weak typeof (self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(weakSelf.searchTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        weakSelf.receiveDevice = NO;
-        CLLog(@"搜索结束");
+//        weakSelf.receiveDevice = NO;
+//        CLLog(@"搜索结束");
     });
 }
 
