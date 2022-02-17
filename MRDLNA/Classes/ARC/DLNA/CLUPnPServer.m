@@ -83,6 +83,10 @@
 }
 
 - (void)stop{
+    NSError *error = nil;
+    if (![_udpSocket leaveMulticastGroup:ssdpAddres error:&error]) {
+        [self onError:error];
+    }
     [_udpSocket close];
 }
 
